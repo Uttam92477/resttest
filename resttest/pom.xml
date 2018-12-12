@@ -25,8 +25,7 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-    
-    <!-- https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_core -->
+        <!-- https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_core -->
 <dependency>
     <groupId>org.apache.jmeter</groupId>
     <artifactId>ApacheJMeter_core</artifactId>
@@ -39,6 +38,7 @@
     <version>5.0</version>
 </dependency>
     
+
   </dependencies>
 
   <build>
