@@ -15,7 +15,7 @@ import org.apache.jorphan.collections.HashTree;
 public class AppExistingJMX {
 
 //	private static final String JMX_FILE_PATH = "C:\\Users\\uttam.r\\Desktop\\TestExistingJMX.jmx";
-	private static final String JMX_FILE_PATH="C:\\jmeter\\test.jmx";
+	private static final String JMX_FILE_PATH = "C:\\jmeter\\test.jmx";
 
 	/*
 	 * JMETER PATHS

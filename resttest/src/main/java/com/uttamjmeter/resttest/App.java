@@ -29,12 +29,9 @@ import org.apache.jmeter.visualizers.ViewResultsFullVisualizer;
 import org.apache.jorphan.collections.HashTree;
 
 /**
- * Created by uttam.r v1
- * This App does the following:
- * 1. Creates a simple JMX with a HTTP Sampler(type HTTPSamplerProxy),
- *		ThreadGroup, LoopController, ResultCollector
- * 2. Runs the JMeter test
- * 3. Saves the result in file 
+ * Created by uttam.r v1 This App does the following: 1. Creates a simple JMX
+ * with a HTTP Sampler(type HTTPSamplerProxy), ThreadGroup, LoopController,
+ * ResultCollector 2. Runs the JMeter test 3. Saves the result in file
  * 
  *
  */
@@ -49,23 +46,21 @@ public class App {
 	/*
 	 * HTTP Sampler props
 	 */
-	private static final String PROTOCOL = "https";//https or http
-	private static final String DOMAIN = "api.github.com";//domain
-	private static final int PORT =443;//port
-	private static final String ACCESS_TOKEN="e1ed8c07fde0c56f167b02f5295c622c964c347d";//TODO sensitive information: Delete before sharing
-	private static final String PATH = "/repos/Uttam92477/test?access_token="+ACCESS_TOKEN;//path
+	private static final String PROTOCOL = "https";// https or http
+	private static final String DOMAIN = "api.github.com";// domain
+	private static final int PORT = 443;// port
+	private static final String ACCESS_TOKEN = "e1ed8c07fde0c56f167b02f5295c622c964c347d";// TODO sensitive information:
+																							// Delete before sharing
+	private static final String PATH = "/repos/Uttam92477/test?access_token=" + ACCESS_TOKEN;// path
 	private static final String METHOD = "PATCH";// GET, POST, etc..
-	private static final String RAW_DATA="{\r\n" + 
-			"  \"name\": \"test\",\r\n" + 
-			"  \"description\": \"This is the actual description\",\r\n" + 
-			"  \"homepage\": \"https://github.com\",\r\n" + 
-			"  \"private\": false,\r\n" + 
-			"  \"has_issues\": true,\r\n" + 
-			"  \"has_projects\": true,\r\n" + 
-			"  \"has_wiki\": true\r\n" + 
-			"}";//DATA to be sent
+	private static final String RAW_DATA = "{\r\n" + "  \"name\": \"test\",\r\n"
+			+ "  \"description\": \"This is the actual description\",\r\n"
+			+ "  \"homepage\": \"https://github.com\",\r\n" + "  \"private\": false,\r\n"
+			+ "  \"has_issues\": true,\r\n" + "  \"has_projects\": true,\r\n" + "  \"has_wiki\": true\r\n" + "}";// DATA
+																													// to
+																													// be
+																													// sent
 
-		
 	/*
 	 * JMETER PATHS
 	 */
@@ -74,7 +69,6 @@ public class App {
 	private static final String JMETER_PROPERTIES_FILEPATH = "C:\\jmeter\\apache-jmeter-5.0\\bin\\jmeter.properties";
 
 	public static void main(String[] args) {
-
 
 		// JMeter Engine
 		StandardJMeterEngine jmeter = new StandardJMeterEngine();
@@ -132,7 +126,6 @@ public class App {
 		loopController.setProperty(TestElement.GUI_CLASS, LoopControlPanel.class.getName());
 		((LoopController) loopController).initialize();
 
-		
 		// Thread Group
 		ThreadGroup threadGroup = new ThreadGroup();
 		threadGroup.setNumThreads(THREAD_COUNT);
